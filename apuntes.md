@@ -5,8 +5,7 @@
 
 ## Tabla de contenidos
 
-- [Bienvenida e Introducción](#bienvenida-e-introducción)
-  - [Todo lo que aprenderás para programar en Bash Shell](#todo-lo-que-aprenderás-para-programar-en-bash-shell)
+- [Introducción](#introducción)
   - [Componentes de Linux, Tipos de Shell y Comandos de información](#componentes-de-linux-tipos-de-shell-y-comandos-de-información)
   - [Bash scripting](#bash-scripting)
   - [Crear nuestro primer Script](#crear-nuestro-primer-script)
@@ -59,13 +58,45 @@
   - [Cierre](#cierre)
 
 
-# Bienvenida e Introducción
-
-## Todo lo que aprenderás para programar en Bash Shell
+# Introducción
 
 ## Componentes de Linux, Tipos de Shell y Comandos de información
 
+![linux-main-components](https://i.imgur.com/xVHJGha.png?1)
+
+- **Kernel**: es el núcleo del sistema operativo, en el cual se gestionan todos los recursos de hardware (RAM, procesamiento, periféricos, etc.); aquí será donde se ejecuten las aplicaciones.
+- **Shell**: es el intérprete, un programa que tiene una interfaz de usuario que permite ejecutar las aplicaciones de un lenguaje de alto nivel y procesarlas en uno de bajo nivel para manipular y controlar aplicaciones y programas como nuestro proyecto.
+- **Aplicaciones**: son las aplicaciones con las que interactuamos día a día e internamente, cada aplicación ejecuta comandos para su funcionamiento, toman control de los periféricos en algunas ocasiones o ejecutan algunas acciones directamente en el núcleo kernel.
+
+Tipos de Shells:
+
+- **SH**
+- **KSH**
+- **CSH**
+- **BASH** <-- La que utilizaremos
+
+Algunos comandos para conocer información sobre el resto de comandos:
+
+- `man [comando]`
+- `info [comando]`
+
 ## Bash scripting
+
+La idea básica de generar programas en bash es poder ejecutar múltiples comandos de forma secuencial en muchas ocasiones para automatizar una tarea en especifico. Estos comandos son colocados en un archivo de textos de manera secuencial para poder ejecutarlos a posterioridad.
+
+1. Para configurar el editor vim debemos estar en `$home`
+2. Creamos el archivo llamado `.vimrc` con el comando: `vim .vimrc`
+3. Presionamos la tecla i para editar, ponemos:
+
+```shell
+set showmode  # mostrar operaciones
+set autoindent  # indentacion automatica
+set tabstop=4   # cantidad de espacios
+set expandtab  # salto de linea, se indenta segun jerarquia.
+set nu  # ver numero de lineas
+syntax on  # colores en el script
+```
+4. Presionamos `:wq` para salir y guardar
 
 ## Crear nuestro primer Script
 
