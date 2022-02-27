@@ -8,6 +8,7 @@
 - [Introducción](#introducción)
   - [Componentes de Linux, Tipos de Shell y Comandos de información](#componentes-de-linux-tipos-de-shell-y-comandos-de-información)
   - [Bash scripting](#bash-scripting)
+  - [Uso básico de VIM](#uso-básico-de-vim)
   - [Crear nuestro primer Script](#crear-nuestro-primer-script)
   - [Ejecutar nuestro script con un nombre único](#ejecutar-nuestro-script-con-un-nombre-único)
 - [Programación Shell Básica](#programación-shell-básica)
@@ -99,6 +100,25 @@ set nu  # ver numero de lineas
 syntax on  # colores en el script
 ```
 4. Presionamos `:wq` para salir y guardar
+
+## Uso básico de VIM
+
+Presionando antes la tecla `Esc`:
+
+- `i` = insertar texto
+- `:q` = salir sin guardar
+- `:q!` = forzar salida
+- `:w` = guardar
+- `:wq` = guardar y salir
+- `u` = Ctrl + z
+- `yy` = copiar una sola linea
+- `p` = pegar
+- `dd` = eliminar una linea
+- `(numero) + dd` = borrar el numero de lineas escrito
+- `(numero) + yy` = copiar el numero de lineas escrito
+- `Ctrl + v` = seleccionar texto
+
+> [Vim cheatsheet](https://devhints.io/vim)
 
 ## Crear nuestro primer Script
 
