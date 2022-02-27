@@ -12,6 +12,8 @@
   - [Ejecutar nuestro script con un nombre único](#ejecutar-nuestro-script-con-un-nombre-único)
 - [Programación Shell Básica](#programación-shell-básica)
   - [Declaración de Variables y Alcance en Bash Shell](#declaración-de-variables-y-alcance-en-bash-shell)
+    - [Variables de entorno](#variables-de-entorno)
+    - [Variables de usuario](#variables-de-usuario)
   - [Tipos de Operadores](#tipos-de-operadores)
   - [Script con Argumentos](#script-con-argumentos)
   - [Sustitución de Comandos en variables](#sustitución-de-comandos-en-variables)
@@ -123,6 +125,30 @@ Como conceptos básicos en programación Bash Shell vimos:
 # Programación Shell Básica
 
 ## Declaración de Variables y Alcance en Bash Shell
+
+Las variables deben ser declaradas en **mayúsculas** (estandar, tambien pueden ser declaradas en minusculas, pero no es recomendable) y son llamadas en la linea de comando (variable de entorno o del S.O.) o dentro de un archivo (variable de usuario o del script) como `$VARIABLE`. Para que se puedan utilizar en el sistema o en algún otro archivo deberemos utilizar la palabra reservada `export`, ejemplo: `export VARIABLE`
+
+### Variables de entorno
+
+Estas variables ayudan a obtener infromacion del sistema, almacenar informacion temporal y modificar su informacion. Existen 2 tipos:
+
+- **Variables Globales**: Son visibles desde el shell que lo creo o desde cuaquier hijo de esa shell.
+- **Variables Locales**: Son visibles solo desde el shell que la creo.
+
+**Variable Persistente**: Para crear una de estas es necesario introducirla en el archivo `/etc/profile` y luego reiniciar el sistema para que sen válidas pero en el caso de los derivados debian si revisamos un poco el script nos damos cuenta que llama a otro archivo llamado `/etc/bash.bashrc` en el cual podemos crear las variables de entorno persistentes.
+
+Por eso no funciona llamar la variable declarada en `/etc/profile` desde un shell
+
+> [Manejo de variables de entorno en Linux](https://www.youtube.com/watch?v=ZX58AHhXpyA): Podemos ver con mas detalles el manejo de variables de entorno en Linux.
+
+### Variables de usuario
+
+Son las variables que se corren dentro de un script como en cualquier programa de computadora C, C++ o Java
+
+- **Variable global**: Se puede usar desde otro script siempre y cuando sea llamado desde el script que contiene la variable.
+- **Variable local**: Solo tiene alcance en el script que la creo.
+
+Ejemplos utilizando [scripts/2_variables.sh](scripts/2_variables.sh) y [scripts/2_variables_2.sh](scripts/2_variables_2.sh)
 
 ## Tipos de Operadores
 
