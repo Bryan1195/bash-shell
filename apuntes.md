@@ -215,6 +215,11 @@ Los conceptos de sustitución de comandos en variables lo aplicamos en el script
 
 ## Debug en Script
 
+Para realizar debugging en un script tenemos dos opciones en el comando de `bash`:
+
+- `-v`: Utilizado para ver el resultado detallado de nuestro script, evaluado línea por línea, o sea, te muestra el script y sus valores evaluados. Ejemplo: `bash -v nombre_script.sh`
+- `-x`: Utilizado para desplegar la información de los comandos que son usados, capturando el comando y su salida, o sea, te muestra el script. valores evaluados y especifica cuales son entradas y salidas. Ejemplo: `bash -x nombre_script.sh`
+
 ## Reto 1
 
 # Script Interactivos
