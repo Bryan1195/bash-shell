@@ -100,7 +100,25 @@ syntax on  # colores en el script
 
 ## Crear nuestro primer Script
 
+Creamos el primer script en Bash Shell básico llamado [1_utilityPostgres.sh](scripts/1_utilityPostgres.sh).
+
+Como conceptos básicos en programación Bash Shell vimos:
+
+- comentarios con `#`
+- una linea de código llamada [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)), la que identifica a un archivo como script ´#!/bin/bash´
+- `echo`: Los argumentos que se pasan a `echo` se imprimen en la salida estándar. `echo` se usa comúnmente en scripts de shell para mostrar un mensaje o generar los resultados de otros comandos.
+
 ## Ejecutar nuestro script con un nombre único
+
+- `chmod`: El siguiente comando lo utilizamos para asignar permisos a un archivo, ejemplo: `chmod NNN <nombre_archivo.sh>` donde `NNN` son los permisos. Mas detalles en: [Modificando permisos en terminal](https://github.com/francomanca93/terminal-y-linea-de-comandos/blob/master/apuntes.md#modificando-permisos-en-la-terminal)
+- Ejecutar un script, hay dos formas estando en la terminal:
+  - `bash nombre_script.sh`
+  - `./ nombre_script.sh`
+  - `sh nombre_script.sh`
+- Cuando creamos un script en shell debemos validar que el mismo no exista o se encuentre reservado su nombre, para comprobar esto lo hacemos con los comandos:
+  - `type nombre_script.sh`: nos indica tipo de archivo y ubicación. Si no aparece nada es porque no esta registrado.
+  - `type -a nombre_script.sh`: todos los archivos encontrados.
+  - `type -t nombre_script.sh`: tipo de archivo.
 
 # Programación Shell Básica
 
