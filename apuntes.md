@@ -152,9 +152,46 @@ Ejemplos utilizando [scripts/2_variables.sh](scripts/2_variables.sh) y [scripts/
 
 ## Tipos de Operadores
 
+Lo operadores son iguales que en todos los lenguajes de programación:
+
+- Operadores ariméticos: `+ - * / %`
+- Operadores relacionales: `> < >= <= == !=`
+- Operadores de asignación: `+= -= *= /= %=`
+
+Cada uno de los operadores los usamos en el script [scripts/3_tiposOperadores.sh](scripts/3_tiposOperadores.sh)
+
 ## Script con Argumentos
 
+Los argumentos en un script son los valores que le pasamos para que este los interprete y trabaje con él.
+
+Dentro del script usamos:
+
+- `$`: para asignar un parametro
+- `$0`: Se refiere al nombre del Script
+- `$1`: al ${10}: Se refiere al número de argumento. Si es más de uno lo colocamos dentro de llaves.
+- `$#`: Es útil para conocer el número de argumentos enviados.
+- `$*`: Con este podemos conocer todos los argumentos enviados.
+
+Al ejecutar al script le pasamos los argumentos, ejemplos:
+
+- `./nombre_script.sh argumento1 argumento2`: una forma de ejecutarlo pasando como argumentos valores.
+- `bash nombre_script.sh "argumento1" "argumento2"`: otra forma de ejecutarlo, ahora si le pasamos como argumentos cadena de caractéres.
+
+El concepto de argumentos lo aplicamos en el script [scripts/4_argumentos.sh](scripts/4_argumentos.sh)
+
 ## Sustitución de Comandos en variables
+
+Para la sustitución de comandos es importante tener en cuenta que el resultado servirá para realizar otras tareas de otras sentencias de nuestro programa.
+
+Las dos maneras de hacerlo:
+
+- Usando el backtick caracter.  `(``)`
+- Usando el signo de dólar con el formato `$(comando)`
+
+> La sintaxis `$()` es el estándar POSIX, y soportado por BASH, Korn Shell, ash, Dash, Zsh, Busybox, etc.
+El uso de backticks es legado y no debería ser utilizado, sigue ahí solo para compatibilidad con versiones muy viejas de Sh.
+
+Los conceptos de sustitución de comandos en variables lo aplicamos en el script [scripts/5_subtitucionComand.sh](scripts/5_subtitucionComand.sh)
 
 ## Debug en Script
 
