@@ -222,6 +222,10 @@ Para realizar debugging en un script tenemos dos opciones en el comando de `bash
 
 ## Reto 1
 
+Desarrollar un programa llamado `utilityHost.sh`, dentro de él vamos a declarar dos variables una llamada option, otra llamada result, vamos a inicializarles e imprimir sus valores.
+
+> Archivo del reto [utilityHost.sh](scripts/retos/utilityHost.sh)
+
 # Script Interactivos
 
 ## Capturar información usuario
