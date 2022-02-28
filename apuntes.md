@@ -230,7 +230,40 @@ Desarrollar un programa llamado `utilityHost.sh`, dentro de él vamos a declarar
 
 ## Capturar información usuario
 
+Script interactivos: Es un script retroalimentado por el usuario.
+
+- `echo -n`: Imprimir información sin el caracter “\n” al final, es decir sin el salto de línea.
+- La variable `$REPLY` es donde se almacenará esa información del standard input.
+- El comando `read` es para leer o capturar información del standard input. Tenemos algunas opción para utilizar con este comando:
+  - `-p`: Permite ingresar una frase o prompt antes de pedir el dato.
+  - `-s`: Modo Sigiloso. No muestra ningún caracter en la terminal, util para contraseñas o información sensible.
+  - `-n [num]`: Permite leer como máximo n caracteres.
+  - `-r`: Toma el botón de retroceso o backspace como un caracter y no borra ningun otro caracter previamente escrito.
+
+Las practicas usando los comandos anteriores los tenemos en los siguientes script
+
 ## Expresiones Regulares
+
+> Cuando se solicita ingresar información través de un programa por parte del usuario que está utilizando el programa, independientemente el lenguaje que esté realizado; es importante considerar la validación de la información no solo en su tamaño sino también en los tipos de datos, formatos soportados lo cual nos permite asegurar la calidad de la información que recibimos, almacenamos y procesamos.
+
+Dentro de este contexto en la programación bash para cumplir con este objetivo se utiliza expresiones regulares, las cuales son básicamente cadenas de caracteres que definen un patrón de búsqueda que se valida frente a una información específica para asegurar que cumple la validación definida.
+
+Se necesita conocer ciertos criterios utilizados en las expresiones regulares que son los siguientes:
+
+- `^`.- Caracter que representa el inicio de la expresión regular.
+- `$`.- Caracter que representa el final de la expresión regular.
+- `*`.- Caracter que representa cero o más ocurrencias de la expresión
+- `+`.- Caracter que representa una o más ocurrencias de la expresión.
+- `{n}`.-Representa `n` veces de una expresión.
+- `[ ]` .- Representa un conjunto de caracteres, por ejemplo: `[a-z]` representa las letras del abecedario de la `a` a la `z`.
+
+Tomando en cuenta estos criterios se realizará un programa que valida la siguiente información:
+
+- Número de Identificación de un tamaño de 10 números. Ejemplo: 1717836520
+- País de Origen denotado por dos letras en un rango específico. Ejemplo: EC, CO, US
+- Fecha de Nacimiento en el formato yyyyMMDD. Ejemplo: 20181222
+
+La resolución del ejemplo anterior lo tenemos en el script [scripts/8_expresionesRegulares.sh](scripts/8_expresionesRegulares.sh)
 
 ## Validar información
 
