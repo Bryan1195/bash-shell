@@ -336,6 +336,20 @@ Ejemplo de pasaje de parámetros: `./script.sh -a -c- d`
 
 ## Descargar información de Internet
 
+Cuando nos encontramos en una consola de un servidor y requerimos instalar algún programa, se requiere conectarnos y traernos el archivos de instalación. Los pasos son:
+
+1. El usuario realiza una petición en una aplicacion, en nuestro caso en un programa bash.
+2. La petición es realizada a internet a través de algún comando, `wget` por ejemplo.
+3. Se procede a descargar un programa o archivo en el equipo.
+
+- Para archivos pequeños ~> `wget`
+- Para comunicarse con un servicio (por ejemplo, una API Restful) ~> `curl`
+- Para archivos de tamaño considerable ~> `aria2`
+  - aria2 es genial porque soporta multiples protocolos como BitTorrent y FTP, además de soportar descargas en paralelo.
+
+Podemos hacer pruebas de descarga de archivos desde softwares de la fundacion apache: https://downloads.apache.org/
+
+
 ## Reto 2
 
 # Condicionales
