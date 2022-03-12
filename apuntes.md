@@ -22,8 +22,9 @@
   - [Reto 1](#reto-1)
 - [Script Interactivos](#script-interactivos)
   - [Capturar información usuario](#capturar-información-usuario)
-  - [Expresiones Regulares](#expresiones-regulares)
   - [Validar información](#validar-información)
+    - [Comando read para validar información](#comando-read-para-validar-información)
+    - [Expresiones Regulares](#expresiones-regulares)
   - [Paso de parámetros y opciones](#paso-de-parámetros-y-opciones)
   - [Descargar información de Internet](#descargar-información-de-internet)
   - [Reto 2](#reto-2)
@@ -242,7 +243,22 @@ Script interactivos: Es un script retroalimentado por el usuario.
 
 Las practicas usando los comandos anteriores los tenemos en los siguientes script
 
-## Expresiones Regulares
+## Validar información
+
+Para el proceso de validación de información tenemos dos maneras de hacerlo:
+
+- Para validar tamaños se utiliza el siguiente comando: `read -n <numero_caracteres>`
+- Para validar el tipo de datos se utilizan las `expresiones regulares`
+
+### Comando read para validar información
+
+- `read -s` -> Oculta la información entrante por el propio usuario.
+- `read -n[1,2,3,4…]` -> Mantiene la linea de ejecución para poder ingresar carácteres como el standard input, hasta que llegue al numero de carácteres definidos. (va sin corchetes ejemplo: `read -n1 ... read -n10`)
+- `read -p` -> Indica que hay que dejar la informacion ingresada en la variable siguiente.
+
+En el script siguiente vemos como realizar validación de información [scripts/8_readValidate.sh](scripts/8_readValidate.sh).
+
+### Expresiones Regulares
 
 > Cuando se solicita ingresar información través de un programa por parte del usuario que está utilizando el programa, independientemente el lenguaje que esté realizado; es importante considerar la validación de la información no solo en su tamaño sino también en los tipos de datos, formatos soportados lo cual nos permite asegurar la calidad de la información que recibimos, almacenamos y procesamos.
 
@@ -263,9 +279,7 @@ Tomando en cuenta estos criterios se realizará un programa que valida la siguie
 - País de Origen denotado por dos letras en un rango específico. Ejemplo: EC, CO, US
 - Fecha de Nacimiento en el formato yyyyMMDD. Ejemplo: 20181222
 
-La resolución del ejemplo anterior lo tenemos en el script [scripts/8_expresionesRegulares.sh](scripts/8_expresionesRegulares.sh)
-
-## Validar información
+La resolución del ejemplo anterior lo tenemos en el script [scripts/8_1_expresionesRegulares.sh](scripts/8_1_expresionesRegulares.sh)
 
 ## Paso de parámetros y opciones
 
