@@ -26,6 +26,8 @@
     - [Comando read para validar información](#comando-read-para-validar-información)
     - [Expresiones Regulares](#expresiones-regulares)
   - [Paso de parámetros y opciones](#paso-de-parámetros-y-opciones)
+    - [Parámetros](#parámetros)
+    - [Opciones](#opciones)
   - [Descargar información de Internet](#descargar-información-de-internet)
   - [Reto 2](#reto-2)
 - [Condicionales](#condicionales)
@@ -282,6 +284,55 @@ Tomando en cuenta estos criterios se realizará un programa que valida la siguie
 La resolución del ejemplo anterior lo tenemos en el script [scripts/8_1_expresionesRegulares.sh](scripts/8_1_expresionesRegulares.sh)
 
 ## Paso de parámetros y opciones
+
+Cuando se le pasa valores de entrada a un script en bash shell tenemos parámentros y opciones.
+
+- Los parámetros son valores que serán utilizados en el script (realizar alguna operacion, unir caracteres o simplemente imprimirlos en pantalla)
+- Las opciones son posibilidades de realizar alguna acción prestablecida en el script.
+
+Las opciones y parámetros pueden ser pasado en un script y separarlos mediante doble guión `--`.
+
+- Ejemplo sin separar parametros de opciones: `./script.sh -a value1 -b -c value2`
+- Ejemplo separando parámetros de opciones: `./script.sh -a -b -c -- value1 value2`
+
+Utilizando los conceptos de parámetros y opciones: [scripts/9_options.sh](scripts/9_options.sh)
+
+### Parámetros
+
+El shell te da algunas variables de lectura para procesar los parámetros de entrada:
+
+- `$ 0` es el nombre del script.
+- `$ 1` es el primer parámetro.
+- `$ 2` es el segundo parámetro.
+- Si queremos pasar mas de 9 parámetros deberemos hacerlo pasando a los mismos entre llaves `$ {10}`.
+- La variable `$ *` contiene todos los parámetros como un solo valor.
+
+Ejemplo de pasaje de parámetros: `./script.sh value1 value2`
+
+### Opciones
+
+Estas son las opciones mas utilizadas para los script de bash:
+
+- `-a`: Listar todos los elementos.
+- `-c`: Obtener la cantidad de elementos.
+- `-d`: Directorio de salida.
+- `-e`: Expandir elementos.
+- `-f`: Especificar un archivo.
+- `-h`: Mostrar la página de ayuda.
+- `-i`: Ignorar mayúsculas.
+- `-l`: listar un texto.
+- `-n`: Decir que no a una pregunta.
+- `-o`: Para enviar la salida a un archivo o más.
+- `-q`: No preguntar al usuario.
+- `-r`: Procesar algo recursivamente.
+- `-s`: Modo sigiloso.
+- `-v`: Modo detallado.
+- `-x`: Especificar el ejecutable.
+- `-y`: Decir sí sin preguntar al usuario.
+
+Ejemplo de pasaje de parámetros: `./script.sh -a -c- d`
+
+> Mas detalles sobre esta sección en el siguiente articulo: https://likegeeks.com/es/scripting-de-bash-parametros-y-opciones/#Parametros_y_opciones_Como_separarlos
 
 ## Descargar información de Internet
 
