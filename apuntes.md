@@ -29,7 +29,6 @@
     - [Parámetros](#parámetros)
     - [Opciones](#opciones)
   - [Descargar información de Internet](#descargar-información-de-internet)
-  - [Reto 2](#reto-2)
 - [Condicionales](#condicionales)
   - [Sentencias If/Else](#sentencias-ifelse)
   - [Reto 3](#reto-3)
@@ -350,11 +349,52 @@ Cuando nos encontramos en una consola de un servidor y requerimos instalar algú
 Podemos hacer pruebas de descarga de archivos desde softwares de la fundacion apache: https://downloads.apache.org/
 
 
-## Reto 2
-
 # Condicionales
 
 ## Sentencias If/Else
+
+Sintaxis `if-else`
+
+```bash
+
+if [ condition ]; then
+  statement
+else
+  statement
+fi
+
+```
+
+Sintaxis `if-elif-else`
+
+```bash
+
+if [ condition ]; then
+  statement
+elif [ condition ]; then
+  statement
+else
+  statement
+fi
+
+```
+
+Los operadores lógicos estándar (>, <, etc.) se usan para comparación lexicográfica de cadenas. Para comparar números se usan los operadores relacionales:
+
+- `-eq`: is equal to // Igual a
+- `-ne`: is not equal to // No es igual a
+- `-gt`: is greater than // Mayor a
+- `-ge`: is greater than or equal to // Mayor o igual a
+- `-lt`: is less than // Menor a
+- `-le`: is less than or equal to // Menor o igual a
+
+En las condiciones tenemos 3 casos:
+
+- `[ condition ]`: condición compatibles con posix shell.
+- `[[ condition ]]`: es una versión extendida de caso anterior, como manejo de expresiones regulares y soporta mas operadores como posix estadar (||, &&, etc). Tambien es soportado por otras shell como zsh, ksh, entre otras. 
+- `(( condition ))` es para validaciones aritméticas (sólo números implicados; preferible en especial cuando hay operaciones aritméticas). Usa los operadores lógicos estándar.
+
+> Mas detalles sobre la explicacion sobre como escribir las codiciones en: [Difference between single and double square brackets in Bash](https://stackoverflow.com/questions/13542832/difference-between-single-and-double-square-brackets-in-bash/31366734#31366734)
 
 ## Reto 3
 
