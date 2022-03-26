@@ -31,7 +31,7 @@
   - [Descargar información de Internet](#descargar-información-de-internet)
 - [Condicionales](#condicionales)
   - [Sentencias If/Else](#sentencias-ifelse)
-  - [Reto 3](#reto-3)
+  - [Reto](#reto)
   - [If Anidados](#if-anidados)
   - [Expresiones Condicionales](#expresiones-condicionales)
   - [Sentencias Case](#sentencias-case)
@@ -396,7 +396,13 @@ En las condiciones tenemos 3 casos:
 
 > Mas detalles sobre la explicacion sobre como escribir las codiciones en: [Difference between single and double square brackets in Bash](https://stackoverflow.com/questions/13542832/difference-between-single-and-double-square-brackets-in-bash/31366734#31366734)
 
-## Reto 3
+## Reto
+
+- Solicitar que se ingrese un valor del 1 al 5.
+- Según el valor ingresado, hacer la validación utilizando las condicionales e imprimir el resultado.
+- Construir expresiones de validación numéricas, cadenas y archivos según la opción ingresada.
+
+> [scripts/retos/validacionesCondicionales.sh](scripts/retos/validacionesCondicionales.sh)
 
 ## If Anidados
 
