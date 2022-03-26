@@ -348,7 +348,6 @@ Cuando nos encontramos en una consola de un servidor y requerimos instalar algú
 
 Podemos hacer pruebas de descarga de archivos desde softwares de la fundacion apache: https://downloads.apache.org/
 
-
 # Condicionales
 
 ## Sentencias If/Else
@@ -405,6 +404,28 @@ En las condiciones tenemos 3 casos:
 > [scripts/retos/validacionesCondicionales.sh](scripts/retos/validacionesCondicionales.sh)
 
 ## If Anidados
+
+Sintaxis `if-Anidado`
+
+```bash
+
+if [ condition ]; then
+    statement
+    if [ condition ]; then
+      statatement del anidado
+    elif [ condition ]; then
+      statement del anidado
+    else
+      statement del anidad
+    fi
+elif [ condition ]; then
+    statement
+else
+    statement
+fi
+```
+
+> Practicas con if anidado: [scripts/12_ifAnidado.sh](scripts/12_ifAnidado.sh)
 
 ## Expresiones Condicionales
 
