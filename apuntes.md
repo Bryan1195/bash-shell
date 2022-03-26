@@ -395,6 +395,10 @@ En las condiciones tenemos 3 casos:
 
 > Mas detalles sobre la explicacion sobre como escribir las codiciones en: [Difference between single and double square brackets in Bash](https://stackoverflow.com/questions/13542832/difference-between-single-and-double-square-brackets-in-bash/31366734#31366734)
 
+
+> Practicas con if-else: [scripts/11_ifElse.sh](scripts/11_ifElse.sh)
+> Practicas con if-elif-else: [](scripts/11_ifElseIfElse.sh)
+
 ## Reto
 
 - Solicitar que se ingrese un valor del 1 al 5.
