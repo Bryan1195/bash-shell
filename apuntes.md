@@ -34,6 +34,11 @@
   - [Reto](#reto)
   - [If Anidados](#if-anidados)
   - [Expresiones Condicionales](#expresiones-condicionales)
+    - [Compatando cadenas](#compatando-cadenas)
+    - [Compatando enteros](#compatando-enteros)
+    - [Operadores boleanos](#operadores-boleanos)
+    - [Otros comparadores interesantes](#otros-comparadores-interesantes)
+    - [Corchetes simples `[  ]` vs Corchetes Dobles `[[  ]]`](#corchetes-simples----vs-corchetes-dobles---)
   - [Sentencias Case](#sentencias-case)
 - [Iteración](#iteración)
   - [Arreglos](#arreglos)
@@ -432,6 +437,61 @@ fi
 > Practicas con if anidado: [scripts/12_ifAnidado.sh](scripts/12_ifAnidado.sh)
 
 ## Expresiones Condicionales
+
+### Compatando cadenas
+
+`[[ [`
+
+- `< <`
+- `= =`
+- `!= !=`
+
+### Compatando enteros
+
+`[[ [`
+
+- `-eq`: is equal to // Igual a
+- `-ne`: is not equal to // No es igual a
+- `-gt`: is greater than // Mayor a
+- `-ge`: is greater than or equal to // Mayor o igual a
+- `-lt`: is less than // Menor a
+- `-le`: is less than or equal to // Menor o igual a
+
+Ejemplo:
+
+- `[[ 001 = 1 ]]` es falso. Ya que la cadena de caractéres. No es la misma.
+- `[[ 001 -eq 1 ]]` es verdadero. Ya que los ceros a la izquierda no tienen valor. Por tanto 1 es igual a 1
+
+### Operadores boleanos
+
+`[[ [`
+
+- `&&`,  `-a`,  `AND`
+- `||`,  `-o`,  `OR`
+
+- Agrupación: Para agrupar operaciones booleanas puedes utilizar paréntesis con los dobles corchetes, mientras que en el caso de los simples corchetes deberás utilizar los paréntesis pero escapados.
+
+### Otros comparadores interesantes
+
+- `-d`: te permitirá saber si es un directorio y si existe, en el equipo se se esta utilizando el script.
+- `-e`: lo mismo que en el caso anterior pero para archivos.
+- `-r`: en este caso te permite saber si el archivo tiene permiso de lectura.
+- `-w`: te permitirá identificar si el archivo tienen permisos de escritura.
+- `-x`: lo mismo que en el caso anterior pero para el caso de permisos de ejecución.
+- `-s`: con esta opción puedes saber si el tamaño del archivo es mayor que cero. Es decir, que no se trata de un archivo vacío.
+
+### Corchetes simples `[  ]` vs Corchetes Dobles `[[  ]]`
+
+Los dobles corchetes resultan ser una mejora respecto a los simples. Así, las diferencias entre uno y otro son las siguientes:
+
+1. No tienes que utilizar las comillas con las variables, los dobles corchetes trabajan perfectamente con los espacios. Así `[ -f "$file" ]` es equivalente a `[[ -f $file ]]`.
+2. Con `[[` puedes utilizar los operadores `||` y `&&` , asi como `<` y `>` para las comparaciones de cadena.
+3. Puedes utilizar el operador `=~` para expresiones regulares, compo por ejemplo `[[ $respuesta =~ ^s(i)?$ ]]`.
+4. También puedes utilizar comodines como por ejemplo en la expresión `[[ abc = a\* ]]`.
+
+Es posible que te preguntes por la razón para seguir utilizando [ corchete simple en lugar de doble. La cuestión es por compatibilidad. Si utilizas Bash en diferentes equipos es posible que te encuentres alguna imcompatibilidad. Así que depende de ti y de donde lo vayas a utilizar.
+
+> Uso de los conceptos anteriores en el script: [scripts/13_expresionesCondicionales.sh](scripts/13_expresionesCondicionales.sh)
 
 ## Sentencias Case
 
