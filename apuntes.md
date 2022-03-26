@@ -495,6 +495,31 @@ Es posible que te preguntes por la razón para seguir utilizando [ corchete simp
 
 ## Sentencias Case
 
+Sintaxis `case`:
+
+```bash
+case expresion in
+
+  pattern_1)
+    statements
+    ;;
+
+  pattern_2)
+    statements
+    ;;
+
+  pattern_3)
+    statements
+    ;;
+  *)
+    STATEMENTS
+    ;;
+
+esac
+```
+
+> Practicas con la sentencia `case`: [scripts/14_case.sh](scripts/14_case.sh)
+
 # Iteración
 
 ## Arreglos
