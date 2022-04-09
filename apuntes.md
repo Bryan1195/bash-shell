@@ -580,6 +580,17 @@ done
 
 ## Sentencia while loop
 
+El ciclo `while` permite ejecutar un bloque de instrucciones mientras se cumpla la condición. Primero comprueba que en efecto se cumple la condición dada y entonces, ejecuta el segmento de código contenido entre las palabras `do` y `done`,  así sucesivamente hasta que la condición no se cumpla.
+
+```bash
+while [ condición ]
+do
+//Bloque de instrucciones
+done
+```
+
+> Practicas con while loop: [scripts/17_whileLoop.sh](scripts/17_whileLoop.sh)
+
 ## Loop Anidados
 
 ## Break y continue
