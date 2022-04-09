@@ -541,6 +541,43 @@ esac
 
 ## Sentencia for loop
 
+Existen 3 formas de realizar un ciclo en bash:
+
+1. Sintaxis para recorrer listas (Similar a Python)
+
+```bash
+for i in lista
+do
+#Instrucciones
+done
+```
+
+2. Sintaxis sobre rango de valores
+
+```bash
+for i in $(seq rango)
+do
+#Instrucciones
+done
+```
+
+El comando `seq` puede ser utilizado de las siguientes formas:
+
+- `seq [último valor]`
+- `seq [primer valor] [último valor]`
+- `seq [primer valor] [incremento] [último valor]`
+
+3. Sintaxis heredada de C
+
+```bash
+for (( inicializador; condición; contador ))
+do
+#Instrucciones
+done
+```
+
+> Practicas con for loop: [scripts/16_forLoop.sh](scripts/16_forLoop.sh). Iteramos sobre listas de numeros, lista de cadenas, sobre archivos, utilizando comando de bash shell (como `ls`), iterando de forma tradicional (for loop heredado de C).
+
 ## Sentencia while loop
 
 ## Loop Anidados
