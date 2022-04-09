@@ -524,6 +524,21 @@ esac
 
 ## Arreglos
 
+- Los Arreglos son un tipo de variables que puede contener N cantidad de valores ya sean cadenas de texto, numéricos, etc.
+- Estos siempre empiezan desde la posición número 0.
+- Para crear un arreglo se debe colocar los elementos dentro de brackets o usar rangos.
+  - Se declaran entre paréntesis y cada elemento se separa por un espacio. `arregloNumeros=(1 2 3 4 5 6)`
+  - En caso de texto se separa por una coma: `nombreTexto = (valor1, valor2, valor3, ... valorN)`
+  - Un elemento puede ser una cadena de elementos que forman un rango y se declara entre llaves: `{A…J} {10…20}`. Escribir estos rangos juntos genera una operación distinta, que es iterar cada elemento del primer rango con cada elementos del segundo rango.
+
+- Para añadir valores: `arregloNombre[posicion]=valor`
+- Para quitar algún elemento: `unset arregloNombre[posición]`
+- Para imprimir todos los valores: `echo “ ${arregloNombre[*]} ”`
+- Para imprimir el tamaño: `echo “ ${#arregloNombre[*]} ”`
+- Para imprimir el valor en X posición: `echo “ ${arregloNombre[X]} ”`
+
+> Practicas con arreglos: [scripts/15_arreglos.sh](scripts/15_arreglos.sh)
+
 ## Sentencia for loop
 
 ## Sentencia while loop
