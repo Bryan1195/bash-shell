@@ -593,6 +593,20 @@ done
 
 ## Loop Anidados
 
+Llamamos loop anidados cuando ejecutamos ciclos dentro de otro ciclo. No es aconsejable abusar mucho de esta técnica ya que dificulta la comprensión del código.
+
+```bash
+for i in lista  # Primer loop
+do
+  for j in lista  # Segundo loop = Loop anidado.
+  do
+    #Instrucciones
+  done
+done
+```
+
+> Practicas con loops anidados: [scripts/18_loopAnidados.sh](scripts/18_loopAnidados.sh)
+
 ## Break y continue
 
 ## Menú de Opciones
