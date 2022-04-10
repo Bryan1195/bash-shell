@@ -609,6 +609,11 @@ done
 
 ## Break y continue
 
+- Utilizamos la sentencia `break` para salir de la ejecucion de los loop `for`, `while` es decir para la iteración.
+- Utilizamos la sentencia `continue` para continuar con la siguiente iteración.
+
+> Practicas con break y continue: [scripts/19_breakContinue.sh](scripts/19_breakContinue.sh)
+
 ## Menú de Opciones
 
 ## Reto 4
